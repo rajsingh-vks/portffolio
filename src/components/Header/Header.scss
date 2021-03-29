@@ -1,0 +1,12 @@
+@import '../../../public/css/variables';
+
+.sticky{
+    position: fixed;
+    top:0px;
+    width: 100%;
+    z-index: 1;
+    box-shadow: $boxshadowColor;
+    background-image: $stickyBackgroundColor;
+    padding: size(8) size(0) !important;
+    transition: all 1s ease;
+}

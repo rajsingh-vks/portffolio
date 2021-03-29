@@ -1,0 +1,41 @@
+@import '../../../public/css/variables';
+
+.Footer{
+    background-color: $primaryColor;
+    padding: size(40) 0;
+    & .container{
+        display: flex;
+        & div{
+            flex: 1;
+            text-align: center;
+            color: $whitefontColor;
+            & i{
+                border: $whitefontColor solid 2px;
+                border-radius: 50%;
+                width: size(30);
+                height: size(30);
+                vertical-align: middle;
+                padding: size(5) size(0);
+                margin-right: size(15);
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 767px){
+    .Footer{
+        padding: size(20) 0;
+        & .container{
+            display: block;
+            & div{
+                text-align: left;
+                margin: size(10) size(0);
+                & i{
+                    text-align: center;
+                    padding: size(6) size(0);
+                    margin-right: size(5);
+                }
+            }
+        }
+    }
+}

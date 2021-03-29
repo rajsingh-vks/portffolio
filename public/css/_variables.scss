@@ -1,0 +1,72 @@
+$base-size: 14;
+
+@function size($target, $context: $base-size) {
+  @return ($target / $context) * 1rem;
+}
+
+ 
+$base-font-size: size($base-size);
+
+@mixin text-dotted($lines) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: $lines;
+  -webkit-box-orient: vertical;
+}
+
+$smallMobileWidth: '320px';
+
+@mixin smallMobile {
+  @media (max-width: #{$smallMobileWidth}) {
+    @content;
+  }
+}
+
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,400;1,500;1,700;1,900&display=swap");
+
+$familyPrimary: 'Roboto', sans-serif;
+
+$familyPrimaryFont : '-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+sans-serif';
+
+
+// Font Weights
+
+$light: 300;
+$regular: 400;
+$medium: 500;
+$semibold: 600;
+$bold: 700;
+
+// Font Weights
+
+
+// Font Size
+
+$heading1: size(34);
+$heading2: size(28);
+$heading3: size(24);
+$heading4: size(20);
+$heading5: size(18);
+$heading6: size(16);
+$paragraph: size(14);
+$paragraph-small: size(12);
+
+// Font Size
+
+
+//default theme//
+$primarfontColor: #23293f;
+$whitefontColor: #fff;
+$profilebackgroundColor: #dbdcde;
+$stickyBackgroundColor: linear-gradient(to right, white, #9241db);
+
+$primaryColor: #9241dc;
+$borderColor: #a5a5a5;
+
+$boxshadowColor:  1px 3px 12px 3px rgba(0, 0, 0, 0.2);
+$innerboxshadowColor:  inset 5px 5px 10px 0px rgba(0,0,0,0.1);
+//default theme//

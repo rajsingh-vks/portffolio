@@ -1,0 +1,79 @@
+@import '../../../public/css/variables';
+
+.Banner{
+    display: flex;
+    & .banner-background{
+        position: absolute;
+        right: 0px;
+        top: 0px;
+        z-index: -1;
+    }
+    & .Profile_details {
+        height: size(400);
+        display: flex;
+        color: $primarfontColor;
+        & .Profile_details_content {
+            margin: auto;
+            & h1 {
+                font-weight: bold;
+            }
+            & p {
+                color: $primarfontColor;
+                font-weight: $medium;
+            }
+            & a {
+                color: $whitefontColor;
+                background-color: $primaryColor;
+                border-radius: size(30);
+                padding: size(10) size(40);
+                font-size: size(16);
+                margin-top: size(15);
+                display: inline-block;
+                box-shadow: $boxshadowColor;
+                transition-duration: 0.5s;
+                &:hover{
+                    transform: scale(0.8);
+                    transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+    & .Profile_img{
+        background-color: $profilebackgroundColor;
+        border-radius: 50%;
+        width: size(300);
+        height: size(300);
+        box-shadow: $boxshadowColor;
+        margin: 10% auto;
+        & img{
+          width: size(300);
+          height: size(300);
+          border-radius: 50%;
+          border: $whitefontColor solid size(4);
+        }
+    }
+}
+
+@media only screen and (max-width: 767px){
+    .Banner{
+        & .Profile_details {
+            height: auto;
+            & .Profile_details_content {
+                margin: size(20) size(0);
+                text-align: center;
+                & a{
+                    padding: size(10) size(10);
+                }
+            }
+        }
+        & .Profile_img{
+            width: 100%;
+            height: auto;  
+            & img{
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+}

@@ -1,0 +1,95 @@
+@import '../public/css/variables';
+@import '../public/css/common';
+
+.App {
+  font-family: $familyPrimary;
+  position: relative;
+  & header {
+    padding: size(20) size(0);
+    & .navbar-brand {
+      width: 4%;
+      float: left;
+      & img{
+        max-width: 100%;
+      }
+    }
+    & .navbar {
+      padding: size(8) 0;
+      & a{
+        color: $primarfontColor;
+        padding: size(0) size(10);
+        &:focus, :hover{
+           color: $primaryColor;
+           text-decoration: none;
+        }
+      }
+    }
+    & .social_track {
+       & a{
+          color: $whitefontColor;
+          border: $whitefontColor solid 2px;
+          border-radius: 50%;
+          width: size(30);
+          height: size(30);
+          float: left;
+          display: flex;
+          margin: 0 size(5);
+          transition-duration: 0.5s;
+          & img, i{
+            margin: auto;
+            color: $whitefontColor;
+          }
+          &:hover{
+            background-color: $whitefontColor;
+            text-decoration: none;
+            transform: scale(0.8);
+            transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
+            & img, i{
+              color: $primaryColor;
+            }
+          }
+       }
+    }
+  }
+}
+
+
+@media screen and (max-width: 991px){
+  .App {
+    & header {
+      background-image: $stickyBackgroundColor;
+      padding: size(10) size(0);
+      & .navbar-brand {
+        width: size(45);
+      }
+      & .navbar {
+        & button{
+           margin-left: auto;
+           border: $whitefontColor solid size(1);
+        }
+        & .navbar-collapse{
+          position: fixed;
+          width: 100%;
+          top: size(70);
+          background-image: $stickyBackgroundColor;
+          left: 0;
+          z-index: 1;
+        }
+        & a{
+          color: $primarfontColor;
+          padding: size(5) size(10);
+          border-bottom: $primarfontColor solid size(1);
+        }
+      }
+      & .social_track {
+         display: block;
+         padding: size(20) size(0);
+         margin-bottom: size(25);
+         & a{
+            padding: 0;
+            border-bottom: none;
+         }
+      }
+    }
+  }
+}

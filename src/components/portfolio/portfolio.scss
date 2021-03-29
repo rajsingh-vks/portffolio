@@ -1,0 +1,81 @@
+@import '../../../public/css/variables';
+
+
+.portfolio{
+  text-align: center;
+  padding-bottom: size(60);
+   & .bloc-tabs{
+      display: flex;
+      border: $borderColor solid size(1);
+      & .tabs{
+        border: $borderColor solid size(1);
+        flex: 1;
+        padding: size(10);
+        cursor: pointer;
+        font-weight: 400;
+        &.active-tabs{
+          font-weight: 600;
+        }
+      }
+   }
+   & .content-tabs {
+      & .content{
+         display: none;
+      }
+      & .active-content{
+         display: block;
+      }
+      
+   }
+   & .project-listing {
+      display: flex;
+      flex-wrap: wrap;
+      & .project{
+        border: $borderColor dashed size(1);
+        border-radius: size(4);
+        box-shadow: $boxshadowColor;
+        width: size(300);
+        margin: size(11);
+        padding: size(20) size(15);
+        box-sizing: border-box;
+        & a{
+           &:hover{
+              text-decoration: none;
+              & h4{
+                font-weight: $bold;
+              }
+           }
+        }
+        & img{
+          width: 100%;
+        }
+        & h4{
+          color: $whitefontColor;
+          padding: size(10) size(0);
+          margin-top: size(15);
+          margin-bottom: size(0);
+          font-size: size(14);
+          background-color: $primaryColor;
+        }
+        &:hover{
+           & img{
+              transform: scale(1.1);
+              transition: all 1s ease;
+           }
+        }
+     }
+  }
+}
+
+
+@media only screen and (max-width: 767px){
+   .portfolio{
+      text-align: center;
+      padding-bottom: size(60);
+       & .project-listing {
+          & .project{
+            margin: size(11) auto;
+         }
+      }
+   }
+}

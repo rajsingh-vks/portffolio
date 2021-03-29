@@ -1,0 +1,39 @@
+@import '../../../public/css/variables';
+
+.ProductScreen{
+  & header{
+    background-image: linear-gradient(to right, white, #9241db);
+  }
+  & .product-details{
+      & .back_homepage{
+          color: $primarfontColor;
+          text-decoration: underline;
+          margin: size(5) size(0) size(25) size(0);
+          display: block;
+          & i{
+              margin-right: size(5);
+          }
+      }
+      & .large{
+         width: 100%;
+      }
+      & h3{
+        text-decoration: underline;
+        color: $primaryColor;
+        text-align: center;
+      }
+      & .technology{
+         border: $borderColor solid size(1);
+         height: 100%;
+         padding: size(30) size(20);
+         & ul{ 
+             padding:size(20);
+             color: $primaryColor;
+         }
+      }
+      & .descripation{
+          text-align: center;
+          margin: size(35);
+      }
+  }
+}
